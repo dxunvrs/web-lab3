@@ -4,6 +4,7 @@ plugins {
 }
 
 version = '1.0'
+group = 'lab'
 
 repositories {
     mavenCentral()
