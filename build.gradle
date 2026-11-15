@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 version = '1.0'
@@ -8,5 +9,17 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 dependencies {
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    compileOnly 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+}
+
+tasks.named('war') {
+    archiveFileName = 'web-lab3.war'
 }
