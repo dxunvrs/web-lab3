@@ -57,7 +57,7 @@
                         <label class="group-title">
                             Радиус R: (от 1 до 4)
                         </label>
-                        <input type="text" class="r-input" name="r" value="{sessionScope.lastR}" />
+                        <input type="text" class="r-input" name="r" value="${sessionScope.lastR}" />
                         <span class="error-msg" id="r-error"></span>
                     </div>
 

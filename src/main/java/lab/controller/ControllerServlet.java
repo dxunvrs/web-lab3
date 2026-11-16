@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -17,6 +18,16 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if ("clear".equals(request.getParameter("action"))) {
+            HttpSession session = request.getSession();
+
+            synchronized (session) {
+                session.removeAttribute("results");
+            }
+
+            getForm(request, response);
+            return;
+        }
         boolean hasParameters;
         hasParameters = request.getParameter("x") != null || request.getParameter("y") != null || request.getParameter("r") != null;
 
