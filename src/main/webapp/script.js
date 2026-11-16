@@ -208,7 +208,7 @@ function drawCanvas() {
 
         ctx.beginPath();
         ctx.arc(x, y, 4, 0, 2 * Math.PI);
-        ctx.fillStyle = point.hit ? "green" : "red";
+        ctx.fillStyle = "midnightblue";
         ctx.fill();
 
         ctx.strokeStyle = "white";
