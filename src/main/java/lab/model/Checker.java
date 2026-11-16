@@ -6,9 +6,9 @@ public class Checker {
     private static final BigDecimal HALF = new BigDecimal("0.5");
 
     public boolean checkHit(Point point) {
-        BigDecimal x = point.x();
-        BigDecimal y = point.y();
-        BigDecimal r = point.r();
+        BigDecimal x = point.getX();
+        BigDecimal y = point.getY();
+        BigDecimal r = point.getR();
         BigDecimal zero = BigDecimal.ZERO;
         BigDecimal halfR = r.multiply(HALF);
         BigDecimal halfX = x.multiply(HALF);
