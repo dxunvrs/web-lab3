@@ -1,0 +1,231 @@
+/* Базовые стили */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* "Шапка" */
+.header {
+    background-color: midnightblue;
+    padding: 16px 24px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.header-info span {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Основной контент */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 24px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+.canvas-section, .form-section, .table-section {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.canvas-section {
+    flex: 0 0 600px;
+    max-height: 600px;
+    max-width: 600px;
+    align-self: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.canvas-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 600px;
+}
+
+.graph-canvas {
+    display: block;
+    width: 600px;
+    height: 600px;
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.form-section {
+    flex: 0 0 380px;
+    padding: 24px;
+}
+
+/* Элементы ввода */
+.form-group {
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+.group-title {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.x-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.x-button {
+    min-width: 40px;
+    padding: 8px 12px;
+    border: 1px solid midnightblue;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    font: inherit;
+    cursor: pointer;
+}
+
+.x-button:hover {
+    background-color: lightsteelblue;
+}
+
+.x-button[aria-pressed="true"] {
+    background-color: midnightblue;
+    color: whitesmoke;
+}
+
+.y-input, .r-input {
+    width: 35%;
+    border: 1.5px solid;
+    border-radius: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* Ошибки валидации */
+.error-msg {
+    display: block;
+    color: darkred;
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: pre-line;
+}
+
+/* Кнопки */
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#submit-btn, #clear-btn {
+    background-color:midnightblue;
+    color: whitesmoke;
+}
+
+/* Таблица */
+.table-section {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto 40px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.table-container {
+    padding: 12px;
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.history-table th, .history-table td {
+    padding: 6px 8px;
+    text-align: center;
+}
+
+.history-table th {
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 700;
+}
+
+.history-body tr:hover {
+    background-color: lightsteelblue;
+}
+
+/* Псевдоклассы */
+.y-input:focus, .r-input:focus {
+    border-color: midnightblue;
+}
+
+#clear-btn:hover, #submit-btn:hover {
+    color: lightgray;
+    border: 1px;
+}
+
+#clear-btn:active, #submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Страница результата */
+.result-card {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 16px;
+    background-color: midnightblue;
+    color: whitesmoke;
+    border-radius: 6px;
+    text-decoration: none;
+}
